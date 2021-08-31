@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+img{
+    width: 55%;
+    border: 2px solid black;
+    background: white;
+}
+ul{
+    list-style: none;
+}
+.sidebar{
+    display: block;
+    position: absolute;
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: rgb(0, 150, 0);
+    transition:all .5s ease;
+}
+.sidebar header{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: rgb(0, 90, 0);
+    user-select: none;
+}
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 40px;
+    color: white;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.sidebar ul li{
+    transition: .4s;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+}
+
+.sidebar ul li:hover{
+    padding-left: 30px;
+}
+#check{
+    display: none;
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;
+    background: darkgreen;
+}
+
+label #btn{
+    left: 10px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: grey;
+    padding: 4px 9px;
+    transition: all .5s;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+
+h1{
+    text-align: center;
+}
+.container{
+    transition: all .5s;
+    background: rgb(226, 226, 226);
+    width: auto;
+}
+#check:checked ~ .container{
+    padding-left: 250px;
+}
+
+#text{
+    text-align: center;
+    border-radius: 10px;
+    display:flex;
+    margin:auto;
+    width:80%;
+}
+#text2{
+    text-align: center;
+    border-radius: 10px;
+    display:flex;
+    margin:auto;
+    width:80%;
+}
+#btn-bar{
+    padding: 2px;
+    width: auto;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+}
+
+/**SlIDER*/
+
+.slider{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.slider ul{
+    display: flex;
+    width: 400%;
+    animation: cambio 20s infinite alternate linear;
+}
+.slider li{
+    width: 100%;
+    list-style: none;   
+}
+.slider img{
+    width: 80%;
+    display: flex;
+    margin: auto;
+}
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300;}
+    100%{margin-left: -300%;}
+}
+
+.title{
+    width: 75%;
+    display: flex;
+    margin: auto;
+}
+h2{
+    text-align: center;
+}
+.image{
+    width: 150px;
+    height: 100px;
+    display: flex;
+    margin: auto;
+}
+
+.sitios-de-interes{
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.list{
+    display: flex;
+    margin: auto;
+    width: auto;
+}
+.videos{
+    display: flex;
+    width: auto;
+    margin: auto;
+}
+.video {
+    display: flex;
+    width: auto;
+    margin: auto;
+}
